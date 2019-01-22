@@ -2,12 +2,12 @@
 
 class DBFactory {
   public static function getMysqlConnexionWithPDO() {
-    $db = new PDO('mysql:host=localhost;dbname=Brewdy', 'brewdy', 'Brewdy2018', array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+    $db = new PDO('mysql:host=localhost;dbname=Brewdy', '', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 
     return $db;
   }
   public static function getMysqlConnexionWithPDOLocal() {
-    $db = new PDO('mysql:host=localhost;dbname=brewdy', 'root', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+    $db = new PDO('mysql:host=localhost;dbname=brewdy', '', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     return $db;
